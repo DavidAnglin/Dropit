@@ -16,10 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg2-HE-vnM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="C1i-eW-C8p" appends="YES" id="gQd-jV-teW"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wg2-HE-vnM" secondAttribute="trailing" id="GUc-S7-cur"/>
+                            <constraint firstItem="wg2-HE-vnM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="O3y-iC-5tf"/>
+                            <constraint firstItem="wg2-HE-vnM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OXu-n4-uSu"/>
+                            <constraint firstItem="wg2-HE-vnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xBS-Hk-VwY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="wg2-HE-vnM" id="6XG-U7-5IE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="C1i-eW-C8p">
+                    <connections>
+                        <action selector="drop:" destination="BYZ-38-t0r" id="QVd-oU-hLR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
