@@ -14,7 +14,7 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate
     
     var dropsPerRow = 10
     
-    lazy var animator:UIDynamicAnimator = {
+    lazy var animator: UIDynamicAnimator = {
         let lazilyCreatedDynamicAnimator = UIDynamicAnimator(referenceView: self.gameView)
         lazilyCreatedDynamicAnimator.delegate = self
         return lazilyCreatedDynamicAnimator
@@ -24,14 +24,16 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate
     
     var attachment: UIAttachmentBehavior? {
         willSet {
-            animator.removeBehavior(attachment)
+        if (attachment != nil) {
+            animator.removeBehavior(attachment!)
             gameView.setPath(nil, named: PathNames.Attachment)
+            }
         }
         didSet {
             if attachment != nil {
-                animator.addBehavior(attachment)
-                attachment?.action = { [unowned self] in
-                    if let attachedView = self.attachment?.items.first as? UIView {
+                animator.addBehavior(attachment!)
+                attachment!.action = { [unowned self] in
+                    if let attachedView = self.attachment!.items.first as? UIView {
                         let path = UIBezierPath()
                         path.moveToPoint(self.attachment!.anchorPoint)
                         path.addLineToPoint(attachedView.center)
@@ -90,7 +92,7 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate
         }
     }
     
-    var lastDroppedView: UIView?
+    var lastDroppedView: UIView!
     
     @IBAction func drop(sender: UITapGestureRecognizer) {
         drop()
@@ -113,7 +115,7 @@ class DropitViewController: UIViewController, UIDynamicAnimatorDelegate
         var dropsToRemove = [UIView]()
         var dropFrame = CGRect(x: 0, y: gameView.frame.maxY, width: dropSize.width, height: dropSize.height)
         
-        do {
+        repeat {
             dropFrame.origin.y -= dropSize.height
             dropFrame.origin.x = 0
             var dropsFound = [UIView]()
