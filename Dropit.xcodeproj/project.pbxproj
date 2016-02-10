@@ -14,6 +14,7 @@
 		D7CA8C021C6AA32F0061ACBE /* DropitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CA8C011C6AA32F0061ACBE /* DropitTests.swift */; };
 		D7CA8C0D1C6AA32F0061ACBE /* DropitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CA8C0C1C6AA32F0061ACBE /* DropitUITests.swift */; };
 		D7CA8C1C1C6AA3BD0061ACBE /* DropitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CA8C1B1C6AA3BD0061ACBE /* DropitViewController.swift */; };
+		D7D4F0061C6B8D2400ED9A12 /* DropitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D4F0051C6B8D2400ED9A12 /* DropitBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D7CA8C0C1C6AA32F0061ACBE /* DropitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropitUITests.swift; sourceTree = "<group>"; };
 		D7CA8C0E1C6AA32F0061ACBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7CA8C1B1C6AA3BD0061ACBE /* DropitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitViewController.swift; sourceTree = SOURCE_ROOT; };
+		D7D4F0051C6B8D2400ED9A12 /* DropitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				D7CA8BF01C6AA32F0061ACBE /* Main.storyboard */,
 				D7CA8C1B1C6AA3BD0061ACBE /* DropitViewController.swift */,
+				D7D4F0051C6B8D2400ED9A12 /* DropitBehavior.swift */,
 				D7CA8C1A1C6AA3360061ACBE /* Supporting Files */,
 			);
 			path = Dropit;
@@ -269,6 +272,7 @@
 			files = (
 				D7CA8C1C1C6AA3BD0061ACBE /* DropitViewController.swift in Sources */,
 				D7CA8BED1C6AA32F0061ACBE /* AppDelegate.swift in Sources */,
+				D7D4F0061C6B8D2400ED9A12 /* DropitBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,7 @@
 				D7CA8C131C6AA32F0061ACBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7CA8C141C6AA32F0061ACBE /* Build configuration list for PBXNativeTarget "DropitTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				D7CA8C161C6AA32F0061ACBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7CA8C171C6AA32F0061ACBE /* Build configuration list for PBXNativeTarget "DropitUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +517,7 @@
 				D7CA8C191C6AA32F0061ACBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
